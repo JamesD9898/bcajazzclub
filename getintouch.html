@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - BCA Jazz Club</title>
+    <link rel="stylesheet" href="main.css" />
+    image.png
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="top-header">
+        <div class="left">
+          BCA Jazz Club<br />
+          <script>
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth(); // 0-11
+            document.write(
+              month < 9 // Before October
+                ? `${year - 1}-${year}`
+                : `${year}-${year + 1}`
+            );
+          </script>
+          Season
+        </div>
+        <div class="center">CONTACT</div>
+        <div class="right">
+          <img src="media/saxophone.jpeg" alt="Saxophone Player Silhouette" />
+        </div>
+      </div>
+      <nav class="nav-header">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="team.html">TEAM</a>
+        <a href="awards.html">AWARDS</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="getintouch.html" class="active">CONTACT</a>
+      </nav>
+    </header>
+
+    <div class="contact-content">
+      <h1>Interested in the BCA Jazz Club?</h1>
+      <p>Fill out the Interest form below:</p>
+      <p class="interest-form">
+        <a href="https://forms.gle/HMyGDrrJvLLdGfFH6" target="_blank"
+          >Click Here</a
+        >
+      </p>
+      <p>
+        Or email us at
+        <a href="mailto:BCAjazzclub@gmail.com" style="color: #004aad"
+          >BCAjazzclub@gmail.com</a
+        >
+      </p>
+      <img src="media/jazzclub.jpg" alt="BCA Jazz Club" class="contact-image" />
+    </div>
+
+    <footer>
+      <h1>BCA Jazz Club</h1>
+      <a href="https://www.instagram.com/bca_jazzclub/">Instagram</a>
+      <a href="https://forms.gle/HMyGDrrJvLLdGfFH6" target="_blank"
+        >Interest Form</a
+      >
+      <p>bcajazzclub.com<br /></p>
+      <h2 style="font-size: 14px">Feel Free to Reach Out</h2>
+      <p>
+        Mohit Kalia (Co-Director): mohkal26@bergen.org<br />
+        Dillon Kim (Co-Director): dilkim26@bergen.org<br />
+        James Doherty (VP & Webmaster): jamdoh26@bergen.org
+      </p>
+    </footer>
+  </body>
+</html>

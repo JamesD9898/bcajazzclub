@@ -1,0 +1,1119 @@
+/* General Body and Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+    font-family: 'Bernoru Black Ultra Expanded';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bernoru Black Ultra Expanded'), url('typefaces/bernoru-blackultraexpanded.woff') format('woff');
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: #faf9f6;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    min-height: calc(100vh - 30px);
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease-out;
+}
+
+*::selection {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+/* Home Page */
+.home-container {
+    position: relative;
+    height: calc(100vh - 30px);
+    width: 100%;
+}
+
+.home-title {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+    font-size: 8vw;
+    line-height: 1;
+    z-index: 2;
+}
+
+#normalfont {
+    font-family: "DM Sans", sans-serif;
+}
+
+.home-subtitle {
+    position: absolute;
+    top: calc(8vw + 60px); /* Position below title */
+    left: 55px;
+    font-family: 'Yeseva One', 'DM Sans', "DM Sans";
+    font-style: italic;
+    font-size: 1.5vw;
+    z-index: 2;
+}
+
+.home-image {
+    position: absolute;
+    left: 5vw;
+    top: 25vh; /* Pushed down a bit */
+    width: 45vw;
+    z-index: 1;
+}
+
+.home-image img {
+    width: 100%;
+    clip-path: polygon(0 22%, 11% 3%, 33% 0, 56% 5%, 72% 16%, 86% 28%, 97% 43%, 100% 59%, 95% 76%, 84% 88%, 69% 97%, 52% 100%, 35% 97%, 19% 88%, 8% 74%, 0 57%);
+    transition: transform 0.3s ease;
+}
+
+.home-image:hover img {
+    transform: scale(1.02);
+}
+
+.home-nav {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.home-nav li a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    text-decoration: none;
+    color: black;
+    line-height: 1.5;
+}
+
+.home-nav li a:hover {
+    color: #c72c2c;
+}
+
+.home-footer-text {
+    position: absolute;
+    bottom: 80px;
+    right: 50px;
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+    font-size: 8vw;
+    line-height: 1;
+    z-index: 2;
+}
+
+/* Header for sub-pages */
+.subpage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #faf9f6;
+}
+
+.subpage-header .left {
+    font-family: 'Yeseva One', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.subpage-header .center {
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.subpage-header .right img {
+    height: 80px;
+}
+
+.subpage-nav {
+    background-color: #faf9f6;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.subpage-nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.subpage-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c72c2c;
+    transition: width 0.3s ease;
+}
+
+.subpage-nav a:hover::after,
+.subpage-nav a.active::after {
+    width: 100%;
+}
+
+.subpage-nav a.active {
+    color: #c72c2c;
+}
+
+/* About Page */
+.about-container {
+    padding: 40px;
+}
+
+.about-section-one {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.about-section-one .image-container img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.about-section-one .image-container img:hover {
+    transform: scale(1.02);
+}
+
+.about-section-one .text-content .quote {
+    font-family: "Yeseva One", "DM Sans";
+    font-size: 2.5em;
+    font-style: italic;
+    margin: 0;
+}
+
+.about-section-one .text-content .author {
+    font-family: "Yeseva One", "DM Sans";
+    font-size: 1.8em;
+    font-style: italic;
+    text-align: left;
+    margin: 0;
+}
+
+.about-section-one .text-content .description {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.about-section-one .text-content .description .drop-cap {
+    font-family: "Yeseva One", "DM Sans";
+    font-size: 4em;
+    float: left;
+    line-height: 0.8;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.about-section-two {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.about-section-two .text-content {
+    width: 50%;
+}
+
+.about-section-two p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section-two .repertoire {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section-two .repertoire-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.about-section-two .repertoire li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.about-section-two .image-container {
+    width: 50%;
+    position: relative;
+}
+
+.about-section-two .image-container .main-image {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.about-section-two .image-container .main-image:hover {
+    transform: scale(1.02);
+}
+
+
+.about-section-two .image-container .overlay-image {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+
+.about-section-two .image-container .overlay-image:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+
+/* Team Page */
+.team-wrapper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Leadership Section */
+.leadership-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Make cards same height */
+    gap: 20px;
+    padding: 20px 40px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px;
+}
+
+.leader-card {
+    width: 30%;
+    min-width: 300px; /* Prevent cards from getting too small */
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.leader-card .image-container {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.leader-card .info {
+    padding: 20px;
+    background: white;
+    flex-grow: 1;
+}
+
+.leader-card .info .name {
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.leader-card .info .role {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    color: #c72c2c;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.leader-card .info .bio {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+
+/* Infinite Scroll Rows */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@keyframes scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.team-row {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.team-row:last-child {
+    margin-bottom: 0;
+}
+
+.team-scroller-content {
+    display: flex;
+    width: fit-content;
+}
+
+.team-row:hover .team-scroller-content {
+    animation-play-state: paused;
+}
+
+.team-row:nth-of-type(odd) .team-scroller-content {
+    animation: scroll 80s linear infinite;
+}
+.team-row:nth-of-type(even) .team-scroller-content {
+    animation: scroll-reverse 90s linear infinite;
+}
+
+.team-member {
+    width: 20vw; /* Narrower for portrait feel */
+    height: 45vh; /* Taller for portrait feel */
+    margin: 0 5px; /* Reduced margin */
+    flex-shrink: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+    text-transform: uppercase;
+}
+.team-member .info .name {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+}
+
+.team-member .info .role,
+.team-member .info .instrument {
+    font-size: 1em;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+
+/* Awards Page */
+.awards-container {
+    padding: 20px;
+}
+
+.awards-container .top-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.awards-container .top-image:hover {
+    transform: scale(1.02);
+}
+
+.awards-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.awards-gallery-item {
+    flex: 1;
+    text-align: left;
+}
+
+.awards-gallery-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+.awards-gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+.awards-gallery-item p {
+    font-size: 1em;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Community Page */
+.community-container {
+    position: relative;
+    padding: 20px;
+}
+
+.community-container img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.community-container img:hover {
+    transform: scale(1.02);
+}
+
+
+.community-text-box {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: rgba(239, 65, 54, 0.85); /* Red with opacity */
+    color: white;
+    padding: 20px;
+    width: 30%;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.5;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Contact Page */
+.contact-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-right {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.contact-info-box {
+    background-color: #c72c2c;
+    /* Opaque red */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    border-radius: 5px;
+}
+
+.contact-left .image-container img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.contact-left .image-container img:hover {
+    transform: scale(1.02);
+}
+
+.contact-right .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.contact-right .image-container img:hover {
+    transform: scale(1.02);
+}
+
+
+.contact-right .image-container:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.contact-right .image-container:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.contact-right .image-container:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.contact-right .image-container:nth-child(3) .inner-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-right .image-container:nth-child(3) .overlay-image {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    width: 80%;
+    filter: drop-shadow(5px 5px 5px #000);
+    transition: transform 0.3s ease;
+}
+
+.contact-right .image-container:nth-child(3) .overlay-image:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f; /* Deep Navy Blue */
+    color: #eee;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-family: 'Bernoru Black Ultra Expanded', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.footer-social-links {
+    margin-bottom: 20px;
+}
+
+.footer-social-links a {
+    color: #eee;
+    font-size: 1.8em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: #ffbd59; /* Gold accent for hover */
+    transform: scale(1.1);
+}
+
+.footer-contact-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+.footer-contact-info p strong {
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-bottom span{
+    margin: 5px 15px;
+}
+h1 {
+    font-family: 'Yeseva One';
+}
+
+h1 span {
+    font-family: 'Bernoru Black Ultra Expanded';
+}
+
+/* Mobile-Friendly Responsive Design */
+@media screen and (max-width: 768px) {
+    /* General mobile adjustments */
+    body {
+        font-size: 14px;
+        min-height: calc(100vh - 20px);
+    }
+    
+    /* Home Page Mobile */
+    .home-container {
+        height: calc(100vh - 20px);
+        padding: 20px;
+    }
+    
+    .home-title {
+        top: 20px;
+        left: 20px;
+        font-size: 12vw;
+        line-height: 1.1;
+    }
+    
+    .home-subtitle {
+        top: calc(12vw + 40px);
+        left: 25px;
+        font-size: 3vw;
+    }
+    
+    .home-image {
+        left: 2vw;
+        top: 20vh;
+        width: 60vw;
+    }
+    
+    .home-nav {
+        bottom: 40px;
+        left: 20px;
+    }
+    
+    .home-nav li a {
+        font-size: 4vw;
+        line-height: 1.8;
+    }
+    
+    .home-footer-text {
+        bottom: 40px;
+        right: 20px;
+        font-size: 12vw;
+    }
+    
+    /* Subpage Header Mobile */
+    .subpage-header {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .subpage-header .left {
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    .subpage-header .center {
+        font-size: 3em;
+        order: -1;
+    }
+    
+    .subpage-header .right img {
+        height: 60px;
+    }
+    
+    /* Navigation Mobile */
+    .subpage-nav {
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .subpage-nav a {
+        margin: 0;
+        font-size: 1.1em;
+        padding: 8px 0;
+    }
+    
+    /* About Page Mobile */
+    .about-container {
+        padding: 20px;
+    }
+    
+    .about-section-one {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .about-section-one .text-content .quote {
+        font-size: 2em;
+    }
+    
+    .about-section-one .text-content .author {
+        font-size: 1.5em;
+    }
+    
+    .about-section-one .text-content .description {
+        font-size: 1.2em;
+    }
+    
+    .about-section-one .text-content .description .drop-cap {
+        font-size: 3em;
+        margin-right: 8px;
+        margin-top: 10px;
+    }
+    
+    .about-section-two {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-section-two .text-content {
+        width: 100%;
+    }
+    
+    .about-section-two .image-container {
+        width: 100%;
+    }
+    
+    .about-section-two .image-container .overlay-image {
+        bottom: -30px;
+        right: -30px;
+        width: 40%;
+    }
+    
+    /* Team Page Mobile */
+    .leadership-section {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .leader-card {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .leader-card .image-container {
+        height: 250px;
+    }
+    
+    .team-member {
+        width: 40vw;
+        height: 35vh;
+        margin: 0 3px;
+    }
+    
+    .team-member .info .name {
+        font-size: 1.4em;
+    }
+    
+    .team-member .info .role,
+    .team-member .info .instrument {
+        font-size: 0.9em;
+    }
+    
+    /* Awards Page Mobile */
+    .awards-container {
+        padding: 15px;
+    }
+    
+    .awards-gallery {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Community Page Mobile */
+    .community-container {
+        padding: 15px;
+    }
+    
+    .community-text-box {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 20px 0;
+        font-size: 1.1em;
+    }
+    
+    /* Contact Page Mobile */
+    .contact-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .contact-right {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .contact-right .image-container:nth-child(1) {
+        grid-column: 1;
+    }
+    
+    .contact-right .image-container:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .contact-right .image-container:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .contact-right .image-container:nth-child(3) .overlay-image {
+        top: -15px;
+        left: -20px;
+        width: 70%;
+    }
+    
+    /* Footer Mobile */
+    footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-logo {
+        font-size: 1.5em;
+    }
+    
+    .footer-social-links a {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+    
+    .footer-contact-info p {
+        font-size: 0.8em;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra small mobile devices */
+    .home-container {
+        padding: 15px;
+    }
+    
+    .home-title {
+        top: 15px;
+        left: 15px;
+        font-size: 14vw;
+    }
+    
+    .home-subtitle {
+        top: calc(14vw + 30px);
+        left: 20px;
+        font-size: 3.5vw;
+    }
+    
+    .home-image {
+        left: 1vw;
+        top: 18vh;
+        width: 70vw;
+    }
+    
+    .home-nav {
+        bottom: 30px;
+        left: 15px;
+    }
+    
+    .home-nav li a {
+        font-size: 4.5vw;
+    }
+    
+    .home-footer-text {
+        bottom: 30px;
+        right: 15px;
+        font-size: 14vw;
+    }
+    
+    .subpage-header .center {
+        font-size: 2.5em;
+    }
+    
+    .subpage-header .right img {
+        height: 50px;
+    }
+    
+    .about-section-one .text-content .quote {
+        font-size: 1.8em;
+    }
+    
+    .about-section-one .text-content .author {
+        font-size: 1.3em;
+    }
+    
+    .about-section-one .text-content .description {
+        font-size: 1.1em;
+    }
+    
+    .about-section-one .text-content .description .drop-cap {
+        font-size: 2.5em;
+    }
+    
+    .leader-card .image-container {
+        height: 200px;
+    }
+    
+    .team-member {
+        width: 45vw;
+        height: 30vh;
+    }
+    
+    .contact-info-box {
+        font-size: 1em;
+        padding: 15px;
+    }
+    
+    .footer-logo {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /* Very small mobile devices */
+    .home-title {
+        font-size: 16vw;
+    }
+    
+    .home-subtitle {
+        font-size: 4vw;
+    }
+    
+    .home-nav li a {
+        font-size: 5vw;
+    }
+    
+    .home-footer-text {
+        font-size: 16vw;
+    }
+    
+    .subpage-header .center {
+        font-size: 2em;
+    }
+    
+    .about-section-one .text-content .quote {
+        font-size: 1.6em;
+    }
+    
+    .about-section-one .text-content .description {
+        font-size: 1em;
+    }
+    
+    .leader-card .info .name {
+        font-size: 1.5em;
+    }
+    
+    .team-member .info .name {
+        font-size: 1.2em;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .home-container {
+        height: 100vh;
+        padding: 10px;
+    }
+    
+    .home-title {
+        top: 10px;
+        font-size: 8vw;
+    }
+    
+    .home-subtitle {
+        top: calc(8vw + 20px);
+        font-size: 2vw;
+    }
+    
+    .home-image {
+        top: 15vh;
+        width: 40vw;
+    }
+    
+    .home-nav {
+        bottom: 20px;
+    }
+    
+    .home-nav li a {
+        font-size: 2.5vw;
+    }
+    
+    .home-footer-text {
+        bottom: 20px;
+        font-size: 8vw;
+    }
+    
+    .subpage-header {
+        padding: 5px 20px;
+        gap: 10px;
+    }
+    
+    .subpage-header .center {
+        font-size: 2.5em;
+    }
+    
+    .subpage-header .right img {
+        height: 40px;
+    }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .subpage-nav a {
+        padding: 12px 0;
+        margin: 2px 0;
+    }
+    
+    .home-nav li a {
+        padding: 8px 0;
+    }
+    
+    .leader-card,
+    .team-member,
+    .contact-left .image-container img,
+    .contact-right .image-container img {
+        cursor: pointer;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .home-image:hover img,
+    .about-section-one .image-container img:hover,
+    .about-section-two .image-container .main-image:hover,
+    .about-section-two .image-container .overlay-image:hover,
+    .leader-card:hover,
+    .team-member:hover,
+    .contact-left .image-container img:hover,
+    .contact-right .image-container img:hover,
+    .awards-container .top-image:hover,
+    .awards-gallery-item img:hover,
+    .community-container img:hover {
+        transform: none;
+    }
+}

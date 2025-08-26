@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - BCA Jazz Club</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/206562350d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Add your kit here -->
+  </head>
+  <body>
+    <header>
+      <div class="subpage-header">
+        <div class="left">
+          BCA Jazz Club<br />
+          <script>
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth(); // 0-11
+            document.write(
+              month < 9 // Before October
+                ? `${year - 1}-${year}`
+                : `${year}-${year + 1}`
+            );
+          </script>
+          Season
+        </div>
+        <div class="center">ABOUT US</div>
+        <div class="right">
+          <img src="media/jazzclub.png" alt="Saxophone Player Silhouette" />
+        </div>
+      </div>
+      <nav class="subpage-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html" class="active">ABOUT</a>
+        <a href="team.html">TEAM</a>
+        <a href="awards.html">AWARDS</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
+
+    <div class="about-container">
+      <div class="about-section-one">
+        <div class="image-container">
+          <img
+            src="media/maingroup.png"
+            alt="BCA Jazz Club at Essentially Ellington"
+          />
+        </div>
+        <div class="text-content">
+          <div class="quote-container">
+            <p class="quote">“You can play a shoestring if you're sincere.”</p>
+            <p class="author">-John Coltrane</p>
+          </div>
+          <p class="description">
+            <span class="drop-cap">W</span>e are the Bergen County Academies
+            Jazz Club, a completely student-run organization and the culmination
+            of our collective efforts to learn and play jazz together. We have
+            had incredible success in our first two years, with multiple awards
+            won at the Essentially Ellington Regional Festival at Newark
+            Academy, and we plan to expand our club in the following year.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-section-two">
+        <div class="text-content">
+          <p>
+            Because of the limited support and availability in jazz at our
+            school, Mohit and Dillon founded this jazz club to allow anyone and
+            everyone to join and learn what jazz is about. We are committed to
+            developing a welcoming and encouraging jazz environment in our
+            school, not to mention making it as fun as possible. Our club meets
+            every Wednesday, 9<sup>th</sup> period, where we either rehearse our
+            repertoire or teach a lesson in music theory.
+          </p>
+          <p>
+            Improvisation is the backbone behind jazz, but it's intimidating to
+            get into. Throughout the year, we've taught about modes, scales,
+            chord theory, and chord progressions, and continue to discover and
+            showcase more concepts to build everyone's foundation for
+            improvising.
+          </p>
+          <p>
+            We've also performed at multiple venues including Newark Academy and
+            the BCA PPO picnic, and plan on performing at many more. Past
+            repertoire includes:
+          </p>
+          <ul class="repertoire">
+            <li>BILLY STRAYHORN Take the "A" Train</li>
+            <li>DUKE ELLINGTON Chinoiserie</li>
+            <li>DUKE ELLINGTON Blues for New Orleans</li>
+            <li>DUKE ELLINGTON Symphony in Riffs</li>
+            <li>CANNONBALL ADDERLY Barefoot Sunday Blues</li>
+            <li>JOE HENDERSON Recordame</li>
+          </ul>
+        </div>
+        <div class="image-container">
+          <img
+            class="main-image"
+            src="media/seniorcenterimagearoundpiano.JPG"
+            alt="Club members"
+          />
+          <img
+            class="overlay-image"
+            src="media/saxophonesection.JPEG"
+            alt="Saxophone illustration"
+          />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">BCA JAZZ CLUB</div>
+        <div class="footer-social-links">
+          <a
+            href="https://www.instagram.com/bca_jazzclub/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="mailto:bcajazzclub@gmail.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <div class="footer-contact-info">
+          <p><strong>Dillon Kim (Co-President):</strong> dilkim26@bergen.org</p>
+          <p>
+            <strong>Mohit Kalia (Co-President):</strong> mohkal26@bergen.org
+          </p>
+          <p>
+            <strong>James Doherty (VP & Webmaster):</strong> jamdoh26@bergen.org
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <span>Established 2023</span>
+          <span id="copyright"></span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById(
+        "copyright"
+      ).textContent = `© ${new Date().getFullYear()} BCA Jazz Club. All Rights Reserved.`;
+    </script>
+  </body>
+</html>

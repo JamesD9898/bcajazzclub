@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - BCA Jazz Club</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/206562350d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Add your kit here -->
+  </head>
+  <body>
+    <header>
+      <div class="subpage-header">
+        <div class="left">
+          BCA Jazz Club<br />
+          <script>
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth(); // 0-11
+            document.write(
+              month < 9 // Before October
+                ? `${year - 1}-${year}`
+                : `${year}-${year + 1}`
+            );
+          </script>
+          Season
+        </div>
+        <div class="center">CONTACT US</div>
+        <div class="right">
+          <img src="media/jazzclub.png" alt="Saxophone Player Silhouette" />
+        </div>
+      </div>
+      <nav class="subpage-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="team.html">TEAM</a>
+        <a href="awards.html">AWARDS</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="contact.html" class="active">CONTACT</a>
+      </nav>
+    </header>
+
+    <div class="contact-container">
+      <div class="contact-left">
+        <div class="contact-info-box">
+          If you have any questions, please feel free to reach out to the club
+          leaders by email:
+          <br />mohkal26@bergen.org <br />dilkim26@bergen.org <br /><br />
+          The BCA Jazz Club meets
+          <strong>every Wednesday, 9<sup>th</sup> period, in room 005</strong>.
+          Feel free to check us out!
+        </div>
+        <div class="image-container">
+          <img
+            src="media/mohitandjamesteaching.JPEG"
+            alt="Mohit and James Teaching"
+          />
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="image-container">
+          <img src="media/aroundpiano.png" alt="Around Piano" />
+        </div>
+        <div class="image-container">
+          <img src="media/saxophonesection.JPEG" alt="Saxophone Section" />
+        </div>
+        <div class="image-container">
+          <div class="inner-image-container">
+            <img src="media/prom.png" alt="Prom Picture" />
+            <img
+              src="media/stickerjackberry.png"
+              alt="Overlay Image"
+              class="overlay-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">BCA JAZZ CLUB</div>
+        <div class="footer-social-links">
+          <a
+            href="https://www.instagram.com/bca_jazzclub/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="mailto:bcajazzclub@gmail.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <div class="footer-contact-info">
+          <p><strong>Dillon Kim (Co-President):</strong> dilkim26@bergen.org</p>
+          <p>
+            <strong>Mohit Kalia (Co-President):</strong> mohkal26@bergen.org
+          </p>
+          <p>
+            <strong>James Doherty (VP & Webmaster):</strong> jamdoh26@bergen.org
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <span>Established 2023</span>
+          <span id="copyright"></span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById(
+        "copyright"
+      ).textContent = `© ${new Date().getFullYear()} BCA Jazz Club. All Rights Reserved.`;
+    </script>
+  </body>
+</html>

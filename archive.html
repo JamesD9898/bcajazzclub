@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCA Jazz Club</title>
+    <link rel="icon" href="media/Charlando Logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      #containitall {
+        display: flex;
+        height: 92vh;
+        width: 100vw;
+        justify-items: center;
+        align-items: center;
+      }
+      #getstarted {
+        width: 200px;
+        font-family: "Georgia", serif;
+        height: auto;
+        padding: 15px;
+        background-color: #ff8c8c;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 20px;
+      }
+      .contained {
+        padding: 5%;
+        width: 40%;
+      }
+      #getstarted:hover {
+        border-radius: 250px;
+        box-shadow: 0px 0 30px rgb(255, 204, 204);
+      }
+      #huge {
+        font-size: 75px;
+        text-align: start;
+      }
+      #enlarge {
+        margin-bottom: 50px;
+        font-size: 18px;
+      }
+
+      #howitworks {
+        display: flex;
+      }
+      .explanation {
+        padding: 5%;
+        width: 40%;
+      }
+      .img {
+        padding: 5%;
+        width: 40%;
+      }
+      #hh {
+        font-size: 60px;
+        text-align: left;
+        margin-left: 5%;
+      }
+      #hh2 {
+        font-size: 60px;
+        text-align: left;
+        margin-left: 5%;
+      }
+
+      h3 {
+        font-size: 40px;
+        color: #ff8c8c;
+      }
+
+      .containitems {
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        display: flex;
+      }
+
+      .explanationl {
+        margin: 5%;
+        width: 40%;
+        background-color: #5eab88;
+        border: 2px solid #c2e1d3;
+        border-radius: 25px;
+      }
+      .explanationl {
+        color: white;
+      }
+      .explanationl h3 {
+        color: white;
+      }
+      #h3h {
+        text-align: center;
+      }
+      #p3p {
+        font-size: 18px;
+        margin: 20px;
+      }
+      *::selection {
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+      }
+      .pic {
+        width: 100%;
+      }
+      .botchat {
+        color: white;
+        background-color: rgb(44, 93, 255);
+        height: auto;
+        min-height: 10px;
+        min-width: 200px;
+        width: auto;
+        border-left: solid 8px rgb(18, 0, 210);
+        border-radius: 5px 15px 15px 5px;
+        width: 50%;
+      }
+      .botchat p {
+        padding: 10px;
+      }
+      .botchat:hover {
+        box-shadow: 0px 0 80px rgb(213, 209, 255);
+      }
+      .userchat:hover {
+        box-shadow: 0px 0 80px #c8fff2;
+      }
+      .userchat {
+        color: white;
+        background-color: rgb(0, 167, 100);
+        height: 140ox;
+        min-height: 20px;
+        min-width: 200px;
+        border-right: solid 8px rgb(0, 100, 76);
+        border-radius: 15px 5px 5px 15px;
+        margin: 2px;
+        margin-left: calc(40% - 20px);
+        width: 50%;
+      }
+      .img {
+        width: 60%;
+        margin-left: 20%;
+        align-items: center;
+      }
+      .userchat p {
+        padding: 10px;
+      }
+      @media (max-width: 767px) {
+        #containitall,
+        #howitworks {
+          flex-direction: column;
+          height: auto;
+          text-align: center;
+          width: calc(100% - 20px);
+        }
+
+        .contained {
+          width: calc(100% - 20px);
+          padding: 10px;
+        }
+
+        .pic {
+          width: 100%;
+          height: auto;
+        }
+        .img {
+          margin: 0;
+          width: calc(100% - 80px);
+        }
+
+        #hh,
+        #hh2 {
+          font-size: 2em;
+        }
+
+        .explanation,
+        .explanationl {
+          width: calc(100% - 20px);
+          padding: 10px;
+        }
+
+        .explanationl {
+          margin: 20px 0;
+        }
+
+        .botchat,
+        .userchat {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="index.html"> BCA Jazz Club </a>
+      </ul>
+      <ul>
+        <a href="/about.html">Meet the Band</a>
+      </ul>
+      <ul class="right">
+        <a href="/getintouch.html" id="prof">Get In Touch</a>
+      </ul>
+    </nav>
+    <div id="containitall">
+      <div class="contained">
+        <h1 id="huge">We're the BCA Jazz Club.</h1>
+        <p id="enlarge">
+          The Bergen County Academies Jazz Club is a completely student-run
+          program, dedicated to learning and performing jazz together.
+        </p>
+        <button id="getstarted" onclick="scrollToBottom()">Learn More</button>
+      </div>
+      <div class="contained">
+        <img
+          class="pic"
+          src="media/Screenshot 2024-05-17 at 9.03.26 PM.png"
+          alt="BCA Jazz club at Essentially Ellington Regional Festival"
+        />
+      </div>
+    </div>
+    <h1 id="hh">
+      “You can play a shoestring if you’re sincere.” <br /><br />– John Coltrane
+    </h1>
+    <div id="howitworks">
+      <div class="explanation">
+        <h3>The Club</h3>
+        <p>
+          The Bergen County Academies Jazz Club is a completely student-run
+          program, dedicated to learning and performing jazz together.
+          <br /><br />
+          The Jazz Club is the culmination of our collective efforts to get more
+          exposure to older tunes of composers like Duke Ellington and Dizzy
+          Gilespie and more modern takes on swing as well. <br /><br />We’ve had
+          a successful debut year in the 2023-2024 school year, performing in
+          the Essentially Ellington Regional Festival at Newark Academy, and
+          we’re thrilled to continue the club next year.
+        </p>
+      </div>
+      <div class="contained">
+        <img
+          class="pic"
+          src="media/jazzclub.jpg"
+          alt="BCA Jazz club with Julius Tolentino"
+        />
+      </div>
+    </div>
+    <div id="educationprinciples">
+      <h1 id="hh2">What we're about</h1>
+      <div id="howitworks">
+        <div class="explanationl">
+          <h3 id="h3h">Repertoire</h3>
+          <p id="p3p">
+            We make sure to learn repertoire almost every lesson. So far with
+            this music we've done great things. After participating in the
+            Essentially Ellington Regional festival, we had 2 soloists, James
+            Doherty (alto sax) and David Villarosa (trumpet), win outstanding
+            soloist awards. We also received tickets to go watch the national
+            Essentially Ellington final concert at Jazz at Lincoln Center for
+            free.
+          </p>
+        </div>
+        <div class="explanationl">
+          <h3 id="h3h">Improvisation</h3>
+          <p id="p3p">
+            Jazz isn’t jazz without improvisation, but learning how to improvise
+            can be tough. <br />That’s why we have specific meetings, where we
+            give presentations on music theory, working our way up to
+            improvisation. <br />Our lessons have so far been about intervals,
+            building chords, common chord progressions, modes, and rhythm for 8
+            bar blues.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Updated "Interactive Scenarios" section -->
+    <div id="howitworks">
+      <div class="explanation">
+        <h3>Meetings</h3>
+        <p>
+          Meetings are always a blast and can range in topics. Many of our
+          meetings comprise of learning and playing through Jazz Repertoire
+          which we perform at local venues and festivals. However, most
+          excitingly, we learn Jazz techniques on some basic theory,
+          improvisation, practicing and expression. Lessons are always
+          interactive and instruments are always involved.
+        </p>
+      </div>
+      <div class="explained">
+        <img class="img" src="media/saxophone.jpeg" alt="Saxophone" />
+      </div>
+    </div>
+    <h1>Frequently Asked Questions</h1>
+    <div class="img">
+      <div class="botchat" id="i1">
+        <p class="botp">Who can join the BCA Jazz Club?</p>
+      </div>
+      <div class="userchat" id="i2">
+        <p class="botp">
+          Anyone who has a basic understanding of one of the following
+          instrument: <br /><br />Saxophone, Trumpet, Trombone, Clarinet, Piano,
+          Bass, Guitar or Drums.<br /><br />
+          You don't have to be a virtuoso or know about jazz to join the club!
+          If you're a jazz master or just looking to try something new, all are
+          welcome as long as your comfortable with playing some music!
+        </p>
+      </div>
+      <div class="botchat" id="i1">
+        <p class="botp">How can I join the BCA Jazz Club?</p>
+      </div>
+      <div class="userchat" id="i2">
+        <p class="botp">
+          The BCA Jazz Club runs during the designated Clubs Period on
+          Wednesdays (Period 9). If your new to BCA, you'll be able to sign up
+          for the club during the beginning of every trimester. <br />
+          <br />
+          However, you can get in touch now! Fill out this
+          <a href="https://forms.gle/HMyGDrrJvLLdGfFH6">Form</a> to join the
+          mailing list! We'll keep in touch as we have some events being planned
+          for this summer!
+        </p>
+      </div>
+      <div class="botchat" id="i1">
+        <p class="botp">What are you guys up to?</p>
+      </div>
+      <div class="userchat" id="i2">
+        <p class="botp">
+          The BCA Jazz Club is planning some pretty awesome things this upcoming
+          year! <br />
+          <br />
+          We plan on revisiting the Essentially Ellington Regional festival,
+          perform at local venues such as churches, school events, and more to
+          come.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function scrollToBottom() {
+        var bottomElement = document.getElementById("howitworks");
+        bottomElement.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <footer>
+      <p>BCA Jazz Club 2024<br />Website by James Doherty</p>
+      <a href="https://www.instagram.com/bca_jazzclub/">Instagram</a>
+    </footer>
+
+    <!-- Updated "Education Principles" section -->
+  </body>
+</html>
