@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team - BCA Jazz Club</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/206562350d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Add your kit here -->
+  </head>
+  <body>
+    <header>
+      <div class="subpage-header">
+        <div class="left">
+          BCA Jazz Club<br />
+          <script>
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth(); // 0-11
+            document.write(
+              month < 9 // Before October
+                ? `${year}-${year + 1}`
+                : `${year + 1}-${year + 2}`
+            );
+          </script>
+          Season
+        </div>
+        <div class="center">MEET THE TEAM</div>
+        <div class="right">
+          <img src="media/jazzclub.png" alt="Saxophone Player Silhouette" />
+        </div>
+      </div>
+      <nav class="subpage-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="team.html" class="active">TEAM</a>
+        <a href="awards.html">AWARDS</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
+
+    <div class="team-wrapper">
+      <div class="leadership-section" id="leadership-section">
+        <!-- Leadership cards will be injected here by JavaScript -->
+      </div>
+      <!-- Team rows will be dynamically injected here -->
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">BCA JAZZ CLUB</div>
+        <div class="footer-social-links">
+          <a
+            href="https://www.instagram.com/bca_jazzclub/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="mailto:bcajazzclub@gmail.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <div class="footer-contact-info">
+          <p><strong>Dillon Kim (Co-President):</strong> dilkim26@bergen.org</p>
+          <p>
+            <strong>Mohit Kalia (Co-President):</strong> mohkal26@bergen.org
+          </p>
+          <p>
+            <strong>James Doherty (VP & Webmaster):</strong> jamdoh26@bergen.org
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <span>Established 2023</span>
+          <span id="copyright"></span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById(
+        "copyright"
+      ).textContent = `© ${new Date().getFullYear()} BCA Jazz Club. All Rights Reserved.`;
+    </script>
+    <script>
+      const allMembers = [
+        // Leadership
+        {
+          name: "Mohit Kalia",
+          role: "Cofounder & Codirector",
+          instrument: "Tenor Sax",
+          image: "media/mohit.png",
+          isLeader: true,
+          bio: "The M stands for Kool. I've only really gotten into jazz in high school, but have been deeply fascinated with great players like Sonny Rollins and Thad Jones. I'm excited to lead the jazz club this season.",
+        },
+        {
+          name: "Dillon Kim",
+          role: "Cofounder & Codirector",
+          instrument: "Piano",
+          image: "media/sad.jpg",
+          isLeader: true,
+          bio: "The K stands for Kool. I've been playing piano since a young age and I've always been interested in Jazz. I started playing classical and quickly moved on to some more exciting music from composers like Ellington and Herbie Hancock. Ever since, I've loved playing jazz.",
+        },
+        {
+          name: "James Doherty",
+          role: "VP & Webmaster",
+          instrument: "Lead Alto Sax",
+          image: "media/biking.jpg",
+          isLeader: true,
+          bio: "0 truths and a lie: The J stands for Kool. I've been playing saxophone since 4th grade and have been influenced by many musicians like Paul Desmond and Cannonball Adderley. Besides saxophone, I also like to play the piano and some guitar.",
+        },
+        // Members
+        {
+          name: "Lorenzo Eli Castro",
+          instrument: "Alto Sax",
+          image: "media/lorenzosaxophonesticker.png",
+        },
+        {
+          name: "Max Scarpa",
+          instrument: "Alto Sax",
+          image: "media/max.png",
+        },
+        {
+          name: "Salvatore Calafiore",
+          instrument: "Alto Sax",
+          image: "media/sal.jpg",
+        },
+
+        {
+          name: "Priscilla Alcala",
+          instrument: "Bari Sax",
+          image: "media/IMG_1614.jpg",
+        },
+        {
+          name: "Michael Hernandez",
+          instrument: "Tenor Sax",
+          image: "media/michael.png",
+        },
+        {
+          name: "Neil Dhalwani",
+          instrument: "Tenor Sax",
+          image: "media/neil.JPEG",
+        },
+        {
+          name: "Aiden Baty",
+          instrument: "Tenor Sax",
+          image: "media/default.png",
+        },
+        {
+          name: "David Villarosa",
+          instrument: "Trumpet",
+          image: "media/david.png",
+        },
+        {
+          name: "Tejas Sastry",
+          instrument: "Trumpet",
+          image: "media/tejastrumpet.PNG",
+        },
+        {
+          name: "Junho Kee",
+          instrument: "Trumpet",
+          image: "media/junho.png",
+        },
+        {
+          name: "Jaden Leung",
+          instrument: "Trombone",
+          image: "media/jadenisbadattrombone.png",
+        },
+        { name: "Ryan Choi", instrument: "Bass", image: "media/default.png" },
+        {
+          name: "David Szabo-Dery",
+          instrument: "Clarinet & Piano",
+          image: "media/davidszabo.png",
+        },
+        {
+          name: "Leah Nguyen",
+          instrument: "Piano",
+          image: "media/default.png",
+        },
+        { name: "Evan Chin", instrument: "Piano", image: "media/default.png" },
+        {
+          name: "Lucas Malachovsky",
+          instrument: "Drums",
+          image: "media/IMG_1614.jpg",
+        },
+        {
+          name: "Miguel Taveras",
+          instrument: "Drums",
+          image: "media/IMG_1614.jpg",
+        },
+        {
+          name: "Jack Berry",
+          instrument: "Guitar",
+          image: "media/default.png",
+        },
+        {
+          name: "Lia Almagor",
+          instrument: "Bass Clarinet",
+          image: "media/default.png",
+        },
+        {
+          name: "Shlok Shah",
+          instrument: "Trumpet",
+          image: "media/default.png",
+        },
+        {
+          name: "Abhinav Bharat",
+          instrument: "Trumpet",
+          image: "media/default.png",
+        },
+        {
+          name: "Emma Botomisy-Asada",
+          instrument: "Piano",
+          image: "media/IMG_1614.jpg",
+        },
+        {
+          name: "Sophia Moon",
+          instrument: "Promotions",
+          image: "media/default.png",
+        },
+        {
+          name: "Mr. Lemma ",
+          instrument: "Club Advisor",
+          image: "media/default.png",
+        },
+        {
+          name: "Mr. Demeter",
+          instrument: "Club Advisor",
+          image: "media/default.png",
+        },
+      ];
+
+      const leadershipSection = document.getElementById("leadership-section");
+      const teamWrapper = document.querySelector(".team-wrapper");
+
+      const leaders = allMembers.filter((member) => member.isLeader);
+      const members = allMembers.filter((member) => !member.isLeader);
+
+      // Populate Leadership Section
+      leaders.forEach((leader) => {
+        const leaderCard = `
+                <div class="leader-card">
+                    <div class="image-container" style="background-image: url('${leader.image}');"></div>
+                    <div class="info">
+                        <div class="name">${leader.name}</div>
+                        <div class="role">${leader.role}</div>
+                        <div class="bio">${leader.bio}</div>
+                    </div>
+                </div>
+            `;
+        leadershipSection.innerHTML += leaderCard;
+      });
+
+      // Function to create a member card
+      function createMemberCard(member) {
+        return `
+                <div class="team-member" style="background-image: url('${member.image}');">
+                    <div class="info">
+                        <div class="name">${member.name}</div>
+                        <div class="instrument">${member.instrument}</div>
+                    </div>
+                </div>
+            `;
+      }
+
+      // Dynamically create and populate scrolling rows
+      const membersPerRow = 9; // Adjust to control members per row
+      for (let i = 0; i < members.length; i += membersPerRow) {
+        const chunk = members.slice(i, i + membersPerRow);
+
+        const teamRow = document.createElement("div");
+        teamRow.className = "team-row";
+
+        const scrollerContent = document.createElement("div");
+        scrollerContent.className = "team-scroller-content";
+
+        // Duplicate chunk for infinite scroll effect
+        const repeatedChunk = [...chunk, ...chunk];
+
+        repeatedChunk.forEach((member) => {
+          scrollerContent.innerHTML += createMemberCard(member);
+        });
+
+        teamRow.appendChild(scrollerContent);
+        teamWrapper.appendChild(teamRow);
+      }
+    </script>
+  </body>
+</html>
